@@ -1,5 +1,5 @@
 ####### STRING (Cadena de texto)
-texto = "Este es un curso de Python por Sergie Code"
+texto = "Curso de python"
 
 # str (string): Texto o cadena de caracteres
 comillasSimples = 'Este es un texto'
