@@ -1,3 +1,4 @@
+from itertools import combinations
 import random
 
 print("Adivina Mi numero del 1 al 10")
@@ -57,3 +58,73 @@ if num_str == reverso:
      print("Es palindromo")
 else:
      print("No es palindromo")
+
+#contar vocales en una palabra o frase 
+class Solution:
+    def contar_vocales(self, texto: str) -> int:
+        texto = texto.lower()
+        vocales = "aeiou"
+        contador = 0
+
+        for letra in texto:
+            if letra in vocales:
+                contador += 1
+
+        return contador
+
+sol = Solution()
+print(sol.contar_vocales("Hola Mundo")) 
+print(sol.contar_vocales("Python"))
+
+#contar consonantes 
+class Solution2 :
+     def contar_consonantes(self, texto: str) -> int:
+        texto = texto.lower()
+        vocales = "aeiou"
+        contador = 0
+
+        for letra in texto:
+            #aqui basicamente le decismo que si solo es una letra y esa letra no esta en vocales , aumenta el contador 
+            if letra.isalpha() and letra not in vocales: # .isalpha() comprueba que la letra sea solo una letra , ni espacio ni numero ni simbolos
+                 contador += 1
+        
+        return contador
+
+Solucion = Solution2()
+print(Solucion.contar_consonantes("Daniel"))
+
+#ejercicio cuentas y banco 
+class CuentaBancaria:
+    def __init__(self, nombre):
+        # 1. Guardar el nombre y saldo inicial en self
+        self.nombre = nombre
+        self.saldo = 0
+
+    def depositar(self, cantidad):
+        # 2. Sumar cantidad al saldo
+        self.saldo += cantidad
+
+    def retirar(self, cantidad):
+        # 3. Restar cantidad si hay suficiente dinero
+        if self.saldo >= cantidad:
+            self.saldo - cantidad
+        else:
+            print("Saldo insuficiente")
+
+    def mostrar_saldo(self):
+        # 4. Imprimir saldo de esta cuenta
+        print(f"Cuenta {self.nombre}: saldo = {self.saldo}")
+
+
+# Crear dos cuentas
+cuenta1 = CuentaBancaria("Ana")
+cuenta2 = CuentaBancaria("Luis")
+
+# Depositar y retirar dinero
+cuenta1.depositar(100)
+cuenta1.retirar(30)
+cuenta1.mostrar_saldo()  #  debería mostrar 70
+
+cuenta2.depositar(200)
+cuenta2.retirar(250)     #  debería decir "Saldo insuficiente"
+cuenta2.mostrar_saldo()  #  debería mostrar 200
