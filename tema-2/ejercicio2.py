@@ -123,8 +123,8 @@ cuenta2 = CuentaBancaria("Luis")
 # Depositar y retirar dinero
 cuenta1.depositar(100)
 cuenta1.retirar(30)
-cuenta1.mostrar_saldo()  #  debería mostrar 70
+cuenta1.mostrar_saldo()  #  deberia mostrar 70
 
 cuenta2.depositar(200)
-cuenta2.retirar(250)     #  debería decir "Saldo insuficiente"
-cuenta2.mostrar_saldo()  #  debería mostrar 200
+cuenta2.retirar(250)     #  deberia decir "Saldo insuficiente"
+cuenta2.mostrar_saldo()  #  deberia mostrar 200
