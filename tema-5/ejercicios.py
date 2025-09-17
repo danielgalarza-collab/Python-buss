@@ -11,7 +11,7 @@ if nombres in notas:
 else :
     print("Estudiante no encontrado")
 
-#ejercicio 4
+#ejercicio 
 evento1 = {"Ana", "Luis", "Pedro", "Sofía"}
 evento2 = {"Marta", "Luis", "Carlos", "Ana"}
 fueron_al_evento = evento1 & evento2
