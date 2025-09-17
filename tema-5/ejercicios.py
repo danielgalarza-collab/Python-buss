@@ -18,36 +18,40 @@ fueron_al_evento = evento1 & evento2
 print("fueron a los 2 evento : " , fueron_al_evento)
 
 # ejercicio final 
-#  Prime checker with loop until user quits.
+# sistema de menu con precios 
+# Menú usando diccionario
+menu = {
+    "Pizza": 8.50,
+    "Hamburguesa": 6.00,
+    "Ensalada": 5.00,
+    "Pasta": 7.50,
+    "Sopa": 4.00
+}
 
-# Set para guardar números palíndromos únicos
-palindromos = set()
+# Pedido del cliente (usamos set para evitar duplicados)
+pedido = set()
 
-# Diccionario para guardar todos los números y su estado
-resultados = {}
+print("=== Bienvenido al restaurante ===")
+print("Menú disponible:")
+for plato, precio in menu.items():
+    print(f"{plato}: ${precio}")
 
-# Bucle principal
 while True:
-    entrada = input("Introduce un número (o 'salir' para terminar): ").strip().lower()
+    opcion = input("\nEscribe el nombre del plato que quieres (o 'salir' para terminar): ").title()
+    
+    if opcion == "Salir":
+        break
+    
+    if opcion in menu:  # verificamos que esté en el menú
+        pedido.add(opcion)
+        print(f"✅ {opcion} agregado al pedido.")
+    else:
+        print("❌ Ese plato no está en el menú.")
 
-    if entrada == "salir":
-        break  # termina el bucle
+# Calcular el total
+total = sum(menu[plato] for plato in pedido)
 
-    # Validación: verificar que sea un número válido
-    if not entrada.isdigit():
-        print("Por favor, introduce solo números.\n")
-        continue
-
-    # Comprobamos si el número es palíndromo
-    es_palindromo = entrada == entrada[::-1]
-
-    # Si es palíndromo, agregamos al set
-    if es_palindromo:
-        palindromos.add(entrada)
-
-    # Guardamos en el diccionario
-    resultados[entrada] = "palíndromo" if es_palindromo else "no palíndromo"
-
-# Mostrar resultados
-print("\nNúmeros palíndromos únicos ingresados:", palindromos)
-print("Todos los resultados:", resultados)
+print("\n=== Resumen del pedido ===")
+for plato in pedido:
+    print(f"- {plato}: ${menu[plato]}")
+print(f"\n💰 Total a pagar: ${total}")
