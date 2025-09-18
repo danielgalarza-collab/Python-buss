@@ -21,7 +21,7 @@ else:
 ## EJEMPLO PRACTICO
 
 while True:
-    print("No te olvides de suscribirte a mi canal @sergiecode")
+    print("No te olvides de suscribirte a mi canal ")
     respuesta = input("¿Desea salir? (s/n)").strip().lower()
     if respuesta == 's':
         break
