@@ -18,7 +18,7 @@ def funcion2(profesor, curso, femenino):
     print(f"El curso de {curso} lo dará {profesion} {profesor}")
 
           # Argumetos = valores
-funcion2("Sergie Code", "Python desde Cero", False)
+funcion2("Daniel", "Python desde Cero", False)
 funcion2("Pedrito", "Cocina", False)
 funcion2("Marina", "Manejo", True)
 funcion2("Mercedes", "Bajo", True)
@@ -47,7 +47,12 @@ def llamar_alumno(**alumno):
     print(f"El apellido del alumno es {alumno["apellido"]}, y su nombre es {alumno["nombre"]}")
 
 llamar_alumno(apellido = "Perez", nombre = "Tobías", edad = 34)
+#Otro ejemplo
+def example_function(**kwargs):
+    for key, value in kwargs.items():
+        print(f'{key}: {value}')
 
+example_function(name='John', age=25, city='New York')
 
 # Variables por defecto / Esto nos dará la posibilidad de NO enviar ese argumento (opcional)
 
