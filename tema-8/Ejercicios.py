@@ -40,3 +40,4 @@ usuarios = [
 ]
 activos = [u["nombre"] for u in usuarios if u ["activo"]]
 print(activos)
+#EJERCICIOS PARA PRACTICAR
