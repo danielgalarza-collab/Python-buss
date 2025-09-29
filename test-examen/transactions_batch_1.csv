@@ -1,0 +1,13 @@
+date,customer,category,amount
+2025-09-01,Alice,groceries,45.90
+2025-09-01,Bob,books,12.50
+2025-09-02,Alice,books,18.00
+2025-09-03,Charlie,groceries,abc
+2025-09-04,Bob,groceries,52.30
+2025-09-04,,electronics,100.00
+2025-09-05,Alice,electronics,249.99
+2025-09-06,Diana,groceries,31.20
+2025-09-07,Eve, ,15.00
+2025-09-35,Frank,books,22.00
+2025-09-08,George,books,5.00
+2025-09-09,Hannah,books,"12,34"

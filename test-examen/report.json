@@ -1,0 +1,16 @@
+{
+    "totals": {
+        "by_customer": {
+            "Diana": NaN,
+            "Frank": -25.0,
+            "Jack": 1e+27
+        },
+        "by_category": {
+            "groceries": NaN
+        },
+        "transactions_count": 3,
+        "invalid_rows": 8
+    },
+    "top_customer": "Diana",
+    "top_category": "groceries"
+}

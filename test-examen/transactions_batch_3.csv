@@ -1,0 +1,12 @@
+date,customer,category,amount
+,Alice,groceries,50.00
+2025-13-01,Bob,books,20.00
+2025-11-01,,electronics,100.00
+2025-11-02,Charlie,,75.00
+2025-11-03,Diana,groceries,NaN
+2025-11-04,Eve,books,twenty
+2025-11-05,Frank,groceries,-25.00
+2025-11-06,George,electronics,
+not-a-date,Hannah,books,12.00
+2025-11-07,Ivan, ,44.00
+2025-11-08,Jack,groceries,1000000000000000000000000000
