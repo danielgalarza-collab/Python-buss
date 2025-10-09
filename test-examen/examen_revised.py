@@ -96,8 +96,15 @@ def write_report(report_filename, error_filename, report_data, errors):
 
     try:
         with open(error_filename, "w", encoding="utf-8") as f:
-            for err in errors:
-                f.write(err + "\n") # Escribo cada error en una línea
+            if errors: #si la lista de errores no está vacia 
+                for err in errors:
+                    f.write(err + "\n") # Escribo cada error en una línea
+            else :
+                f.write("No errors found .\n") # en el caso que no haya errores
+    #Ademas de generar el reporte en JSON , escribo un archivo de log de errores. Si hay error en alguna fila  , lo voy declarando linea por linea
+    # y si no hay errores lo declaro igual con un "No errors found" , de esta manera no queda vacio y siempre se informa al usuario         
+    
+
     except Exception as e:
         print(f"Error al escribir el log de errores: {e}")
 
